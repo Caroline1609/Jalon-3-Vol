@@ -16,6 +16,7 @@ public class main{
         reservation client1 = new reservation("Dupond", "Marine", 20, 800, false, 244, "New York");
         
         System.out.println(client1.ToString());
+        System.out.println(client1.reductionAge(800));
 
         
 
