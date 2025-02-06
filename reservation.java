@@ -24,17 +24,13 @@ public class reservation {
     }
 
     public String ToString(){
-            return "Réservation\n" + "Nom : " + this.nom + "\nPrenom : " + this.prenom + "\nAge : " + this.age + "\nPrix final : " + this.prixFinal + "\nNumeros de vol" + this.numVol + " \nDestination : " + this.destination ;
+            return "Réservation\n" + "Nom : " + this.nom + "\nPrenom : " + this.prenom + "\nAge : " + this.age + "\nPrix final : " + this.prixFinal + "\nNumeros de vol : " + this.numVol + " \nDestination : " + this.destination ;
 
     }
 
-    public 
+    public double reductionAge(double prixDepart){
 
-
-
-
-    public double reductionAge(){
-        double prixInitial = this.prixFinal;
+        prixDepart = this.prixFinal;
 
         if(this.age < 66) {
             this.prixFinal -= this.prixFinal / (this.age * 0.1);
@@ -42,12 +38,14 @@ public class reservation {
             this.prixFinal -= this.prixFinal / (this.age * 0.05)    ;
         }
 
-        if (this.prixFinal <= prixInitial - 600) {
+        if (this.prixFinal <= prixDepart - 600) {
 
-            
+            this.prixFinal = prixDepart - 600;
+
+            return prixDepart - this.prixFinal;
 
         } else {
-            return prixInitial - this.prixFinal;
+            return prixDepart - this.prixFinal;
         }
     }
 

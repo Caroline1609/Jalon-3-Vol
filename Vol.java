@@ -1,5 +1,6 @@
-public class Vol{
 
+public class Vol{
+    
     private int id;
     private String destination;
     private double tarif;
