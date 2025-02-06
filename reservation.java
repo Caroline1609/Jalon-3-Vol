@@ -33,9 +33,11 @@ public class reservation {
         prixDepart = this.prixFinal;
 
         if(this.age < 66) {
+
             this.prixFinal -= this.prixFinal / (this.age * 0.1);
         } else {
-            this.prixFinal -= this.prixFinal / (this.age * 0.05)    ;
+
+            this.prixFinal -= this.prixFinal / (this.age * 0.05);
         }
 
         if (this.prixFinal <= prixDepart - 600) {
@@ -48,6 +50,8 @@ public class reservation {
             return prixDepart - this.prixFinal;
         }
     }
+
+
 
 
 
